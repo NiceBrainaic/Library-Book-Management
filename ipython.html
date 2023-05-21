@@ -1,0 +1,45 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 14 11:56:50 2021
+
+@author: sharr
+"""
+
+import pickle
+from tabulate import tabulate
+import csv
+f=open("Book1.csv")
+f=open("book_data.dat","rb")
+def book_entry():
+    f=open("Book1.csv","r")
+    rec=csv.reader(f)
+    
+    
+def Show_BKS():
+    rec=csv.reader(f)
+    print(tabulate(rec, tablefmt="fancy_grid"))
+    
+while (True):
+ print()
+ print("1 : ADD BOOK DATA")
+ print("2 : AVAILABLE BOOKS STATUS")
+ print("3 : UPCOMING BOOKS STATUS")
+ print("4 : BOOKS AVAILABLE FOR RENT")
+ print("5 : BOOKS RENTED")
+ print("6 : TOTAL BOOKS SOLD")
+ print("8 : Exit")
+ print()
+ 
+ choice = int(input("Please Select An Above Option: ")) 
+ if(choice== 1): 
+     book_entry()
+     print()
+     q=input("Would you like to continue?(y/n)")
+     if q=="n":
+         break
+ elif (choice==2): 
+     Show_BKS()
+     print()
+     q=input("Would you like to continue?(y/n)")
+     if q=="n":
+         break
